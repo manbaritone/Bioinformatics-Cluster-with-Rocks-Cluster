@@ -12,6 +12,6 @@ https://sourceforge.net/projects/apbs/files/apbs/
 https://sourceforge.net/projects/pdb2pqr/files/pdb2pqr/
 
 ```
-export PATH="$PATH:/apps/pdb2pqr" 
-export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/apps/pdb2pqr"
+# export PATH="$PATH:/apps/pdb2pqr" 
+# export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/apps/pdb2pqr"
 ```
