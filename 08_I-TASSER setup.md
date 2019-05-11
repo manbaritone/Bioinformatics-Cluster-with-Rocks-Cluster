@@ -7,4 +7,4 @@ Download I-TASSER5.0 and Library form web, take all library files to libdir fold
 # cd I-TASSER5.0
 ```
 
-extract file using command in download.pl (don't compile with download.pl) 
+And extract file using command in download.pl (don't compile with download.pl) 
