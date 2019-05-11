@@ -3,28 +3,30 @@ http://gridscheduler.sourceforge.net/howto/GridEngineHowto.html#General Grid Eng
 http://biohpc.blogspot.com/2016/10/sge-installation-of-son-of-grid-engine.html
 http://codingandmore.blogspot.com/2014/02/adding-head-node-of-rocks-as-compute.html
 
-yum install pam-devel openmotif lesstif openmotif-devel
-
-yum -y install jemalloc-devel openssl-devel ncurses-devel pam-devel libXmu-devel hwloc-devel hwloc hwloc-libs java-devel javacc ant-junit libdb-devel motif-devel csh ksh xterm db4-utils perl-XML-Simple perl-Env xorg-x11-fonts-ISO8859-1-100dpi xorg-x11-fonts-ISO8859-1-75dpi
-
-hostnamectl set-hostname pluto.localhost
-vi /etc/hosts
+```
+# yum install pam-devel openmotif lesstif openmotif-devel
+# yum -y install jemalloc-devel openssl-devel ncurses-devel pam-devel libXmu-devel hwloc-devel hwloc hwloc-libs java-devel javacc ant-junit libdb-devel motif-devel csh ksh xterm db4-utils perl-XML-Simple perl-Env xorg-x11-fonts-ISO8859-1-100dpi xorg-x11-fonts-ISO8859-1-75dpi
+# hostnamectl set-hostname pluto.localhost
+# vi /etc/hosts
 158.108.26.49  pluto.localhost pluto
 
-groupadd -g 490 sgeadmin
-useradd -u 495 -g 490 -r -m -s /bin/bash -c "SGE Admin" sgeadmin
-visudo >> %sgeadmin       ALL=(ALL)       NOPASSWD: ALL
+# groupadd -g 490 sgeadmin
+# useradd -u 495 -g 490 -r -m -s /bin/bash -c "SGE Admin" sgeadmin
+# visudo >> %sgeadmin       ALL=(ALL)       NOPASSWD: ALL
 
-tar zxvfp sge-8.1.9.tar.gz
-cd sge-8.1.9/source/
-sh scripts/bootstrap.sh && ./aimk && ./aimk -man
-./scripts/zerodepend
+# tar zxvfp sge-8.1.9.tar.gz
+# cd sge-8.1.9/source/
+# sh scripts/bootstrap.sh && ./aimk && ./aimk -man
+# ./scripts/zerodepend
 
-export SGE_ROOT=/apps/gridengine && mkdir $SGE_ROOT
-echo Y | ./scripts/distinst -local -all -libs -noexit
-chown -R sgeadmin.sgeadmin /apps/gridengine
-cd $SGE_ROOT
-./install_qmaster
+# export SGE_ROOT=/apps/gridengine && mkdir $SGE_ROOT
+# echo Y | ./scripts/distinst -local -all -libs -noexit
+# chown -R sgeadmin.sgeadmin /apps/gridengine
+# cd $SGE_ROOT
+```
+
+```
+# ./install_qmaster
 
 press enter at the intro screen
 press "y" and then specify sgeadmin as the user id
@@ -55,37 +57,47 @@ enter the names of your hosts who will be able to administer and submit jobs (en
 skip shadow hosts for now (press "n")
 choose "1" for normal configuration and agree with "y"
 press enter to accept the next message and "n" to refuse to see the previous screen again and then finally enter to exit the installer
+```
 
-./install_execd --> sequencial enter
-/etc/init.d/sgemaster.pluto stop
-/etc/init.d/sgemaster.pluto start
-/etc/init.d/sgeexecd.pluto stop
-/etc/init.d/sgeexecd.pluto start
-env | grep SGE
+```
+# ./install_execd --> sequencial enter
+# /etc/init.d/sgemaster.pluto stop
+# /etc/init.d/sgemaster.pluto start
+# /etc/init.d/sgeexecd.pluto stop
+# /etc/init.d/sgeexecd.pluto start
+# env | grep SGE
+```
 
-export PATH="$PATH:/apps/gridengine/bin/lx-amd64" 
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/apps/gridengine/lib/lx-amd64
+```
+# export PATH="$PATH:/apps/gridengine/bin/lx-amd64" 
+# export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/apps/gridengine/lib/lx-amd64
+```
 
-hostname
-hostname -s
-qconf -sq all.q | grep slots
-qconf -mattr queue slots '[pluto.localhost=20]' all.q
-/etc/init.d/sgemaster.pluto stop
-/etc/init.d/sgemaster.pluto start
-/etc/init.d/sgeexecd.pluto stop
-/etc/init.d/sgeexecd.pluto start
+```
+# hostname
+# hostname -s
+# qconf -sq all.q | grep slots
+# qconf -mattr queue slots '[pluto.localhost=20]' all.q
+# /etc/init.d/sgemaster.pluto stop
+# /etc/init.d/sgemaster.pluto start
+# /etc/init.d/sgeexecd.pluto stop
+# /etc/init.d/sgeexecd.pluto start
+```
 
-qconf -as pluto
+```
+# qconf -as pluto
+```
 
-qmon
+```
+# qmon
 Queue Control > Clone > pluto.q 
 > qconf -mattr queue slots '[pluto.localhost=20]' pluto.q 
+```
 
-————————————
-
+```
 ln -s /usr/lib64/libXpm.so.4 /usr/lib64/libXpm.so
 ln -s /usr/lib64/libdb-4.7.so /usr/lib64/libdb-4.4.so  
 install > libdb-4.4.so
-
+```
 
 http://idolinux.blogspot.com/2008/09/deploying-sun-grid-engine-on-cluster.html
