@@ -34,7 +34,7 @@ https://www.rosettacommons.org/sites/default/files/uploads/forum/Rosetta%20Insta
 # ./scons.py -j 20 bin mode=release extras=opencl
 ```
 
-``
+```
 export ROSETTA=/apps/rosetta/main/source/bin
 export ROSETTADB=/apps/rosetta/main/database
 export ANTIBODY=/apps/rosetta/tools/antibody
@@ -51,7 +51,7 @@ export ANTIBODY=/apps/rosetta/tools/antibody
 # tar -zxvf nr.*
 ```
 
-``
+```
 # tar -xzvf blast-2.2.26-x64-linux.tar.gz
 # mv blast-2.2.26 blast
 # sudo cp -r blast /apps
