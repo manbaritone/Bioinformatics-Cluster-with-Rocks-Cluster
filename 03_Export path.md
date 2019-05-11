@@ -1,8 +1,8 @@
 **Add up after install software**
 
-```
-create file path.sh to folder /etc/profile.d/
+### Create file path.sh to folder /etc/profile.d/
 
+```
 # vi /etc/profile.d/path.sh
 
 #!/bin/bash
