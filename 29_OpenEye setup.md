@@ -1,3 +1,5 @@
+Download software from https://www.eyesopen.com/downloads
+
 ```
 # export PATH="$PATH:/apps/openeye/bin"
 # export OE_DIR="/apps/openeye/"
