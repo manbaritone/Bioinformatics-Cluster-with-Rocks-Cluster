@@ -1,6 +1,7 @@
 ```
 # yum install dssp
 # ./autogen
+```
 
 **Boost**
 ```
