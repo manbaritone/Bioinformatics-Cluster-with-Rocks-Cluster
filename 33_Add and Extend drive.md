@@ -26,6 +26,7 @@ https://medium.com/@nareerat.prr/adding-a-new-disk-creating-new-partitions-and-a
 ```
 # syncs data to new directory
 # rsync -av /state/partition1/apps/* /data/apps/
+```
 
 ### Combine
 ```
