@@ -1,8 +1,9 @@
-*** Add up after install software ***
+**Add up after install software**
 
+```
 create file path.sh to folder /etc/profile.d/
 
-vi /etc/profile.d/path.sh
+# vi /etc/profile.d/path.sh
 
 #!/bin/bash
 
@@ -46,3 +47,4 @@ export PATH="$PATH:/apps/zrank"
 export PATH="$PATH:/apps/ncbi-blast/bin"
 export BLASTDB=/apps/ncbi-blast/db
 export PATH="$PATH:/apps/blast/bin"
+```
