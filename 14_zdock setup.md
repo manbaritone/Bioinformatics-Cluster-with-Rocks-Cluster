@@ -1,6 +1,6 @@
 Download zdock zrank rdock
 
-For zdock extract to /app
+For zdock extract to /app\
 For zrank and rdock extract to inside of zdock folder 
 
 ```
