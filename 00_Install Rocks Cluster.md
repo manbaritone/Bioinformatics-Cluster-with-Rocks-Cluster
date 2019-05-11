@@ -1,11 +1,12 @@
 ![Alt text](http://i1-linux.softpedia-static.com/screenshots/Rocks-Cluster_1.png)
 
-## Pre-setup and Installtion Rocks with USB
+## Pre-setup and Installtion Rocks with USB 
+(This method is supported for Rocks 6.2 Sidewinder (CentOS 6.6))
 
 ### Frontend Node (Master node)
 
 1) Cluster that will be install, must setup BIOS by enable PXE or Network Booting and setup usb boot in first order
-2) Download the lastest version of Rocks from http://www.rocksclusters.org, download jumbo (DVD) version
+2) Download the Rocks from http://www.rocksclusters.org, download jumbo (DVD) version
 3) Download Rufus from https://rufus.akeo.ie/ and setup with usb on Windows, using ISO image file that downloaded from Rocks website
 4) When usb bootable is finished, then adjust parameter files in usb by following (credit: https://lists.sdsc.edu/pipermail/npaci-rocks-discussion/2016-March/068852.html and modify with slightly):
 
