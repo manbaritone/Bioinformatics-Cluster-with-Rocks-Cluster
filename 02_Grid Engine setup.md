@@ -1,4 +1,4 @@
-** Rocks Cluster provides SGE in Rocks setup ** 
+**Rocks Cluster provides SGE in Rocks setup** 
 
 http://gridscheduler.sourceforge.net/CompileGridEngineSource.html
 http://gridscheduler.sourceforge.net/howto/GridEngineHowto.html#General Grid Engine concepts
