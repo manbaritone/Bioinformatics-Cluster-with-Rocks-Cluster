@@ -3,4 +3,10 @@
 
 # Setup Bioinformatics Server/Cluster with Rocks Cluster
 
-This server is supported for bioinformatics tasks. Capability of server is depended on system that will be setup. 
+This guide is method for Rocks cluster installtion for bioinformatics tasks which is based on CentOS 6.6 with diskless compute nodes.
+
+For more information please see at: http://rocksclusters.org
+
+If you have any question, pleace contact to me: bundit.b@hotmail.com
+
+Enjoys!!!
