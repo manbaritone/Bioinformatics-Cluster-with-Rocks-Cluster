@@ -1,7 +1,7 @@
 ![Alt text](http://i1-linux.softpedia-static.com/screenshots/Rocks-Cluster_1.png)
 
 ## Pre-setup and Installtion Rocks with USB 
-(This method is supported for Rocks 6.2 Sidewinder (CentOS 6.6))
+**This method is supported for Rocks 6.2 Sidewinder (CentOS 6.6)**
 
 ### Frontend Node (Master node)
 
