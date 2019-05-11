@@ -22,11 +22,11 @@
     get to the shell prompt: <ctrl-alt-F2>
         
     1. mount your usb drive under /mnt/cdrom      
-          # mount /dev/sda1 /mnt/cdrom  
+          ```# mount /dev/sda1 /mnt/cdrom```
     2. copy /mnt/cdrom/rocks.conf /tmp
-          # cp /mnt/cdrom/rocks.conf /tmp
+          ```# cp /mnt/cdrom/rocks.conf /tmp```
     3. start lighttpd
-          # /lighttpd/sbin/lighttpd -f /lighttpd/conf/lighttpd.conf
+          ```# /lighttpd/sbin/lighttpd -f /lighttpd/conf/lighttpd.conf```
  
     go back to the graphical interface and ask it to reload the page (alt-F6). Pick the rolls you want from local CD/DVD. They should all be there.
  
