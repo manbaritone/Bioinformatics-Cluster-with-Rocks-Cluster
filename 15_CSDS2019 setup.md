@@ -6,7 +6,7 @@
 # ../bin/batch_register -current_machine -site_id XXXX -conf_code YYYYYY -email <ZZZZZZZZZZZZZZZZZZZ> -auto_accept_licence
 ```
 
-### To generate license offline
+### Generate license offline
 https://www.ccdc.cam.ac.uk/support-and-resources/support/case/?caseid=c9c53a6b-e7e6-e611-8591-005056868fc8
 ```
 # ssh compute-0-0
