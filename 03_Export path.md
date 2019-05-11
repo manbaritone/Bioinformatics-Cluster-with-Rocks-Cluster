@@ -1,4 +1,4 @@
-**Add up after install software**
+### Add up after install software
 
 ### Create file path.sh to folder /etc/profile.d/
 
