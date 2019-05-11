@@ -1,3 +1,5 @@
+** Rocks Cluster provides SGE in Rocks setup ** 
+
 http://gridscheduler.sourceforge.net/CompileGridEngineSource.html
 http://gridscheduler.sourceforge.net/howto/GridEngineHowto.html#General Grid Engine concepts
 http://biohpc.blogspot.com/2016/10/sge-installation-of-son-of-grid-engine.html
