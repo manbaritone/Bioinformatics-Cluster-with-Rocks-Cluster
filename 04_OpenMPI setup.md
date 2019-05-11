@@ -1,3 +1,5 @@
+**OpenMPI is provided in Rocks instsllation** 
+
 http://www.simunano.com/2015/07/how-to-install-openmpi.html
 https://www.open-mpi.org/faq/?category=building#build-rte-sge
 
