@@ -1,6 +1,7 @@
 ### Change home directory
 ```
-# vi /etc/default/useradd --> HOME=/pluto
+# vi /etc/default/useradd
+HOME=/pluto
 ```
 
 ### Add user
