@@ -17,16 +17,13 @@ https://medium.com/@dzeyelid/check-easy-install-jupyterhub-and-jupyterlab-includ
 ```
 # cd ~
 # source ~/anaconda3/bin/activate
-# (base) $ conda install -y -c conda-forge jupyterhub
-# (base) $ conda install -y -c conda-forge jupyterlab
-# (base) $ jupyter labextension install -y @jupyterlab/hub-extension
+# conda install -y -c conda-forge jupyterhub
+# conda install -y -c conda-forge jupyterlab
+# jupyter labextension install -y @jupyterlab/hub-extension
+# /apps/anaconda3/bin/pip install git+https://github.com/jupyter/sudospawner
 ```
 
 ### Run jupyterhub (Note: this is just an example, please configure according to your situation.)
-```
-#(base) $ jupyterhub --Spawner.cmd="['jupyter-labhub']" --no-ssl
-```
-
 ```
 # vi /lib/systemd/system/jupyterhub.service
 
@@ -37,7 +34,9 @@ After=syslog.target network.target
 [Service]
 User=root
 Environment="PATH=/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/apps/anaconda3/bin"
-ExecStart=/apps/anaconda3/bin/jupyterhub --Spawner.cmd="['jupyter-labhub']" --no-ssl
+ExecStart=/apps/anaconda3/bin/jupyterhub --JupyterHub.spawner_class=sudospawner.SudoSpawner -f /apps/anaconda3/etc/jupyter/jupyterhub_config.py
+
+WorkingDirectory=/apps/anaconda3/etc/jupyter/
 
 [Install]
 WantedBy=multi-user.target
