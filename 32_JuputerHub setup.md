@@ -34,7 +34,8 @@ After=syslog.target network.target
 [Service]
 User=root
 Environment="PATH=/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/apps/anaconda3/bin"
-ExecStart=/apps/anaconda3/bin/jupyterhub --JupyterHub.spawner_class=sudospawner.SudoSpawner -f /apps/anaconda3/etc/jupyter/jupyterhub_config.py
+ExecStart=/apps/anaconda3/bin/python /apps/anaconda3/bin/jupyterhub --Spawner.cmd="['jupyter-labhub']" --no-ssl --JupyterHub.spawner_class=sudospawner.SudoSpawner -f /apps/anaconda3/etc/jupyter/jupyterhub_config.py
+WorkingDirectory=/apps/anaconda3/etc/jupyter/
 
 WorkingDirectory=/apps/anaconda3/etc/jupyter/
 
