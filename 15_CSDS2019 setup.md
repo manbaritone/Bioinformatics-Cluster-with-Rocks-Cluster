@@ -1,17 +1,17 @@
 ```
-# tar -xvf csds-2018.1-linux-x64.tar 
+# tar -xvf csds-2020.0-linux-x64.tar 
 # ./csds-linux-x64.run 
 
-# cd /apps/CCDC/CSD_2019/csd 
-# ../bin/batch_register -current_machine -site_id XXXX -conf_code YYYYYY -email <ZZZZZZZZZZZZZZZZZZZ> -auto_accept_licence
+# cd /apps/CCDC/CSD_2020/csd 
+# ../bin/ccdc_activator -k XXXXXXX-XXXXXX-XXXXXX-XXXXXX-XXXXXX-XXXXXX -g -f ./master_license.dat -A
 ```
 
 ### Generate license offline
-https://www.ccdc.cam.ac.uk/support-and-resources/support/case/?caseid=c9c53a6b-e7e6-e611-8591-005056868fc8
+https://www.ccdc.cam.ac.uk/support-and-resources/support/case/?caseid=8f5d786c-682d-ea11-978f-005056977c87
 ```
 # ssh compute-0-0
-# cd /apps/CCDC/CSD_2019/csd 
-# ../bin/batch_register -serial_dir /apps/CCDC/CSD_2019/csd -write_serial
+# cd /apps/CCDC/CSD_2020/csd 
+# ../bin/ccdc_activator -k XXXXXXX-XXXXXX-XXXXXX-XXXXXX-XXXXXX-XXXXXX -g -f ./c0_license.dat -A
 # exit
 ```
 
