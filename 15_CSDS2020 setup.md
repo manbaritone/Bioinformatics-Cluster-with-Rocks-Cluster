@@ -18,7 +18,7 @@ https://www.ccdc.cam.ac.uk/support-and-resources/support/case/?caseid=8f5d786c-6
 ### Online Registration
 ```
 # cd /apps/CCDC/CSD_2019/csd
-# ../bin/batch_register -serial_dir /apps/CCDC/CSD_2019/csd -write_licence -site_id XXXX -conf_code YYYYYY -email <ZZZZZZZZZZZZZZZZZZZ>
+# ../bin/ccdc_activator -k XXXXXXX-XXXXXX-XXXXXX-XXXXXX-XXXXXX-XXXXXX -a -o -f ./c0_license.dat -A
 ```
 
 ### For using with SGE
