@@ -21,6 +21,7 @@ $ reboot now
 
 ```
 $ yum install kernel-* epel-release libglvnd-devel gcc
+$ reboot now
 ```
 
 ### Disabling Nouveau
