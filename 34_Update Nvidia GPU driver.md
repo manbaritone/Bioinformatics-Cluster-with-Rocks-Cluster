@@ -30,7 +30,7 @@ $ reboot now
 $ vi /etc/modprobe.d/blacklist-nouveau.conf 
 blacklist nouveau
 options nouveau modeset=0
-dracut --force
+$ dracut --force
 ```
 
 ### Install Driver & Cuda Toolkits
