@@ -4,5 +4,5 @@
 # cd cmake-3.12.3
 # sudo ./bootstrap --prefix=/apps/cmake-3.12.3 --parallel=8
 # sudo make -j8
-# sudo make install -j8
+# sudo make install
 ```
