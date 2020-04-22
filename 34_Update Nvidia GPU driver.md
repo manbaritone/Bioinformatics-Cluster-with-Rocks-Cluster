@@ -10,7 +10,9 @@ $ reboot now
 ### Set Grub nouveau.modeset=0
 
 ```
-$ vi /etc/default/grub and add nouveau.modeset=0 in GRUB_CMDLINE_LINUX 
+$ vi /etc/default/grub 
+add nouveau.modeset=0 in GRUB_CMDLINE_LINUX 
+
 $ grub2-mkconfig -o /boot/efi/EFI/centos/grub.cfg
 $ systemctl isolate multi-user.target
 $ systemctl set-default multi-user.target
@@ -30,6 +32,7 @@ $ reboot now
 $ vi /etc/modprobe.d/blacklist-nouveau.conf 
 blacklist nouveau
 options nouveau modeset=0
+
 $ dracut --force
 ```
 
