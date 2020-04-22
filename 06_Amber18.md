@@ -1,5 +1,3 @@
-http://jswails.wikidot.com/installing-amber14-and-ambertools14
-
 ```
 # export CUDA_HOME="/usr/local/cuda-9.2"
 
