@@ -50,7 +50,7 @@ ${GOLD_DIR}/bin/gold_auto gold.conf
 ###############################################
 ```
 
-### Licence servewr setup
+### Licence server setup
 ```
 chmod a+x ccdc_licence_server-linux-x64-installer.run
 ./ccdc_licence_server-linux-x64-installer.run
