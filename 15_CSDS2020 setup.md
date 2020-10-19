@@ -49,3 +49,34 @@ ${GOLD_DIR}/bin/gold_auto gold.conf
 
 ###############################################
 ```
+
+### Licence servewr setup
+```
+chmod a+x ccdc_licence_server-linux-x64-installer.run
+./ccdc_licence_server-linux-x64-installer.run
+```
+make service script
+```
+vi /etc/systemd/system/ccdcfloatserver.service
+
+[Unit]
+Description=ccdc-floating-server
+
+After=network.target local-fs.target multi-user.target
+Requires=network.target local-fs.target multi-user.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=3
+User=root
+ExecStart=/apps/CCDC/CCDCLicServer/CCDCFloatServer -s -productfile=/apps/CCDC/CCDCLicServer/ccdc.dat -config=/apps/CCDC/CCDCLicServer/ccdc.config -silent
+
+[Install]
+WantedBy=multi-user.target
+```
+Setup port by ccdc.config
+```
+# Port LexFloatServer should bind to
+port=8880
+```
