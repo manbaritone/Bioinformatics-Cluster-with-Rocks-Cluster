@@ -79,4 +79,12 @@ Setup port by ccdc.config
 ```
 # Port LexFloatServer should bind to
 port=8880
+
+
+# run to make ccdc.dat
+./CCDCFloatServer -a -licensekey=123456-123456-123456-123456-123456-123456 -config=./ccdc.config -productfile=./ccdc.dat
+
+# start the service
+systemctl start ccdcfloatserver
+
 ```
