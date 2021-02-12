@@ -1,10 +1,19 @@
+Amber is a suite of biomolecular simulation programs. It began in the late 1970's, and is maintained by an active development community.
+
+The term "Amber" refers to two things. First, it is a set of molecular mechanical force fields for the simulation of biomolecules (these force fields are in the public domain, and are used in a variety of simulation programs). Second, it is a package of molecular simulation programs which includes source code and demos.
+
+Amber is distributed in two parts: AmberTools20 and Amber20. You can use AmberTools20 without Amber20, but not vice versa.
+
+Ref: https://ambermd.org/
+
+
+### Pre-installation
+
 System: CMake 3.12.2, CUDA 9.2, GNU7 v7.3.0, OpenMPI3 v3.1.0 with Lmod
 
 Ref: 
 https://www.hull1.com/linux/2020/08/21/complie-amber20.html
 https://ambermd.org/doc12/Amber20.pdf
-
-### Pre-installation
 
 #### Install Dependencies
 ```
