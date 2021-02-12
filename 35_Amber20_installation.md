@@ -23,8 +23,6 @@ yum -y install tcsh make \
 			   libXt-devel libXext-devel \
 			   perl perl-ExtUtils-MakeMaker util-linux wget \
 			   bzip2 bzip2-devel zlib-devel tar
-
-yum -y install scipy numpy python-matplotlib
 ```
 
 #### Extract amber
