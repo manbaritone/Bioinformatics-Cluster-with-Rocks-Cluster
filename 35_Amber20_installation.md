@@ -6,7 +6,7 @@ https://ambermd.org/doc12/Amber20.pdf
 
 ### Pre-installation
 
-#Install Dependencies
+#### Install Dependencies
 ```
 yum -y install tcsh make \
 			   gcc gcc-gfortran gcc-c++ \
@@ -18,19 +18,19 @@ yum -y install tcsh make \
 yum -y install scipy numpy python-matplotlib
 ```
 
-#Extract amber
+#### Extract amber
 ```
 tar xvfj AmberTools20.tar.bz2
 tar xvfj Amber20.tar.bz2
 ```
-#Create amber20 folder at destination path (e.g. /apps/amber20)
+#### Create amber20 folder at destination path (e.g. /apps/amber20)
 ```
 mkdir /apps/amber20
 ```
 
 ### Compile Serial CPU
 
-#Run amber configure script
+#### Run amber configure script
 ```
 cd amber20_src
 source amber.sh
