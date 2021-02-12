@@ -11,7 +11,7 @@ Ref: https://ambermd.org/
 
 System: CMake 3.12.2, CUDA 9.2, GNU7 v7.3.0, OpenMPI3 v3.1.0 with Lmod
 
-Ref: 
+Ref: \
 https://www.hull1.com/linux/2020/08/21/complie-amber20.html \
 https://ambermd.org/doc12/Amber20.pdf
 
