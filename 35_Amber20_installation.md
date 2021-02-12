@@ -37,14 +37,14 @@ source amber.sh
 ./configure gnu
 ```
 
-#Complie and install
+#### Complie and install
 ```
 cd build
 cmake .. -DCMAKE_INSTALL_PREFIX=/apps/amber20 -DCOMPILER=GNU
 make install -j8
 ```
 
-#Test
+#### Test
 ```
 cd /apps/amber20
 source amber.sh
@@ -66,7 +66,7 @@ Amber tries to support all CUDA SDK versions up to 11.x. In the past, they have 
 * GTX-780Ti cards require a modified Bios from Exxact Corp to give correct numerical results.
 * GTX-Titan-Black Edition cards require NVIDIA Driver version >= 337.09 or 331.79 or later for correct numerical results.
 
-#Run amber configure script
+#### Run amber configure script
 ```
 module load cuda/9.2
 
@@ -75,7 +75,7 @@ source amber.sh
 ./configure -cuda -noX11 gnu
 ```
 
-#Complie and install
+#### Complie and install
 ```
 cd build
 cmake .. -DCMAKE_INSTALL_PREFIX=/apps/amber20 -DCOMPILER=GNU -DCUDA=TRUE -DCUDA_TOOLKIT_ROOT_DIR=/usr/local/cuda-9.2
@@ -83,7 +83,7 @@ make clean
 make install -j8
 ```
 
-#Test
+#### Test
 ```
 cd /apps/amber20
 source amber.sh
@@ -92,7 +92,7 @@ make test.cuda
 
 ### Compile for Parallel CPU
 
-#Run amber configure script
+#### Run amber configure script
 ```
 module load openmpi3
 
@@ -101,7 +101,7 @@ source amber.sh
 ./configure -noX11 -openmp gnu
 ```
 
-#Complie and install
+#### Complie and install
 ```
 cd build
 cmake .. -DCMAKE_INSTALL_PREFIX=/apps/amber20 -DCOMPILER=GNU -DMPI=TRUE
@@ -109,7 +109,7 @@ make clean
 make install -j8
 ```
 
-#Test
+#### Test
 ```
 cd /apps/amber20
 export DO_PARALLEL='mpirun -np 2'
@@ -133,7 +133,7 @@ Amber tries to support all CUDA SDK versions up to 11.x. In the past, they have 
 * GTX-780Ti cards require a modified Bios from Exxact Corp to give correct numerical results.
 * GTX-Titan-Black Edition cards require NVIDIA Driver version >= 337.09 or 331.79 or later for correct numerical results.
 
-#Run amber configure script
+#### Run amber configure script
 ```
 module load cuda/9.2
 module load openmpi3
@@ -143,7 +143,7 @@ source amber.sh
 ./configure -noX11 -openmp -cuda gnu
 ```
 
-#Complie and install
+#### Complie and install
 ```
 cd build
 cmake .. -DCMAKE_INSTALL_PREFIX=/apps/amber20 -DCOMPILER=GNU -DMPI=TRUE -DCUDA=TRUE -DCUDA_TOOLKIT_ROOT_DIR=/usr/local/cuda-9.2
@@ -151,7 +151,7 @@ make clean
 make install -j8
 ```
 
-#Test
+#### Test
 ```
 cd /apps/amber20
 export DO_PARALLEL='mpirun -np 2'
