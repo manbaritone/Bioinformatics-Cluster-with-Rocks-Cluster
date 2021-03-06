@@ -40,8 +40,8 @@ mkdir /apps/amber20
 #### Run amber configure script
 ```
 cd amber20_src
-source amber.sh
 ./configure gnu
+source amber.sh
 ```
 
 #### Complie and install
