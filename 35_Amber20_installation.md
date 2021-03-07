@@ -182,9 +182,9 @@ Amber tries to support all CUDA SDK versions up to 11.x. In the past, they have 
 * GTX-780Ti cards require a modified Bios from Exxact Corp to give correct numerical results.
 * GTX-Titan-Black Edition cards require NVIDIA Driver version >= 337.09 or 331.79 or later for correct numerical results.
 
-### Download NVIDIA NCCL from https://developer.nvidia.com/nccl
+#### Download NVIDIA NCCL from https://developer.nvidia.com/nccl
 
-### Install PnetCDF
+#### Install PnetCDF
 
 * Download PnetCDF from https://parallel-netcdf.github.io/wiki/Download.html
 ```
