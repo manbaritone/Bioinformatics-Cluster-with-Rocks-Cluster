@@ -182,7 +182,17 @@ Amber tries to support all CUDA SDK versions up to 11.x. In the past, they have 
 * GTX-780Ti cards require a modified Bios from Exxact Corp to give correct numerical results.
 * GTX-Titan-Black Edition cards require NVIDIA Driver version >= 337.09 or 331.79 or later for correct numerical results.
 
-Download NVIDIA NCCL from https://developer.nvidia.com/nccl
+### Download NVIDIA NCCL from https://developer.nvidia.com/nccl
+
+### Install PnetCDF
+
+* Download PnetCDF from https://parallel-netcdf.github.io/wiki/Download.html
+```
+autoreconf -i
+./configure --prefix=/apps/PnetCDF
+make -j8
+make install
+```
 
 #### Run amber configure script
 ```
@@ -199,7 +209,7 @@ source amber.sh
 export NCCL_HOME="~/apps/lib/nccl_2.6.4-1+cuda10.0_x86_64"
 cd build
 make clean
-cmake .. -DCMAKE_INSTALL_PREFIX=/apps/amber20 -DCOMPILER=GNU -DMPI=TRUE -DCUDA=TRUE -DCUDA_TOOLKIT_ROOT_DIR=/usr/local/cuda-9.2 -DNCCL=TRUE -DINSTALL_TESTS=FALSE
+cmake .. -DCMAKE_INSTALL_PREFIX=/apps/amber20 -DCOMPILER=GNU -DMPI=TRUE -DCUDA=TRUE -DCUDA_TOOLKIT_ROOT_DIR=/usr/local/cuda-9.2 -DNCCL=TRUE -DINSTALL_TESTS=FALSE -DPnetCDF_C_LIBRARY=~/apps/pnetcdf/lib/ -DPnetCDF_C_INCLUDE_DIR=~/apps/pnetcdf/include/
 make install -j8
 ```
 
