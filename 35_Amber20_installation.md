@@ -85,8 +85,8 @@ source amber.sh
 #### Complie and install
 ```
 cd build
-cmake .. -DCMAKE_INSTALL_PREFIX=/apps/amber20 -DCOMPILER=GNU -DCUDA=TRUE -DCUDA_TOOLKIT_ROOT_DIR=/usr/local/cuda-9.2
 make clean
+cmake .. -DCMAKE_INSTALL_PREFIX=/apps/amber20 -DCOMPILER=GNU -DCUDA=TRUE -DCUDA_TOOLKIT_ROOT_DIR=/usr/local/cuda-9.2
 make install -j8
 ```
 
@@ -111,8 +111,8 @@ source amber.sh
 #### Complie and install
 ```
 cd build
-cmake .. -DCMAKE_INSTALL_PREFIX=/apps/amber20 -DCOMPILER=GNU -DMPI=TRUE
 make clean
+cmake .. -DCMAKE_INSTALL_PREFIX=/apps/amber20 -DCOMPILER=GNU -DMPI=TRUE
 make install -j8
 ```
 
@@ -153,8 +153,8 @@ source amber.sh
 #### Complie and install
 ```
 cd build
-cmake .. -DCMAKE_INSTALL_PREFIX=/apps/amber20 -DCOMPILER=GNU -DMPI=TRUE -DCUDA=TRUE -DCUDA_TOOLKIT_ROOT_DIR=/usr/local/cuda-9.2
 make clean
+cmake .. -DCMAKE_INSTALL_PREFIX=/apps/amber20 -DCOMPILER=GNU -DMPI=TRUE -DCUDA=TRUE -DCUDA_TOOLKIT_ROOT_DIR=/usr/local/cuda-9.2
 make install -j8
 ```
 
