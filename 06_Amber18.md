@@ -25,5 +25,5 @@
 
 ```
 # ./configure -openmp gnu
-# make openmp
+# make install -j16
 ```
