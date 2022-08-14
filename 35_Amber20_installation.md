@@ -47,7 +47,7 @@ source amber.sh
 #### Complie and install
 ```
 cd build
-cmake .. -DCMAKE_INSTALL_PREFIX=/apps/amber20 -DCOMPILER=GNU
+cmake .. -DCMAKE_INSTALL_PREFIX=/apps/amber20 -DCOMPILER=GNU -DDOWNLOAD_MINICONDA=TRUE -DMINICONDA_USE_PY3=TRUE -DINSTALL_TESTS=FALSE
 make install -j8
 ```
 
@@ -86,7 +86,7 @@ source amber.sh
 ```
 cd build
 make clean
-cmake .. -DCMAKE_INSTALL_PREFIX=/apps/amber20 -DCOMPILER=GNU -DCUDA=TRUE -DCUDA_TOOLKIT_ROOT_DIR=/usr/local/cuda-9.2
+cmake .. -DCMAKE_INSTALL_PREFIX=/apps/amber20 -DCOMPILER=GNU -DCUDA=TRUE -DCUDA_TOOLKIT_ROOT_DIR=/usr/local/cuda-9.2 -DDOWNLOAD_MINICONDA=TRUE -DMINICONDA_USE_PY3=TRUE -DINSTALL_TESTS=FALSE
 make install -j8
 ```
 
@@ -112,7 +112,7 @@ source amber.sh
 ```
 cd build
 make clean
-cmake .. -DCMAKE_INSTALL_PREFIX=/apps/amber20 -DCOMPILER=GNU -DMPI=TRUE
+cmake .. -DCMAKE_INSTALL_PREFIX=/apps/amber20 -DCOMPILER=GNU -DMPI=TRUE -DDOWNLOAD_MINICONDA=TRUE -DMINICONDA_USE_PY3=TRUE -DINSTALL_TESTS=FALSE
 make install -j8
 ```
 
@@ -154,7 +154,7 @@ source amber.sh
 ```
 cd build
 make clean
-cmake .. -DCMAKE_INSTALL_PREFIX=/apps/amber20 -DCOMPILER=GNU -DMPI=TRUE -DCUDA=TRUE -DCUDA_TOOLKIT_ROOT_DIR=/usr/local/cuda-9.2
+cmake .. -DCMAKE_INSTALL_PREFIX=/apps/amber20 -DCOMPILER=GNU -DMPI=TRUE -DCUDA=TRUE -DCUDA_TOOLKIT_ROOT_DIR=/usr/local/cuda-9.2 -DDOWNLOAD_MINICONDA=TRUE -DMINICONDA_USE_PY3=TRUE -DINSTALL_TESTS=FALSE
 make install -j8
 ```
 
