@@ -35,12 +35,19 @@ tar xvfj Amber20.tar.bz2
 mkdir /apps/amber20
 ```
 
+#### Upgrade and update Amber
+```
+cd amber20_src
+./update_amber --upgrade
+./update_amber --update
+```
+
 ### Compile Serial CPU
 
 #### Run amber configure script
 ```
 cd amber20_src
-./configure gnu
+./configure -noX11 gnu
 source amber.sh
 ```
 
