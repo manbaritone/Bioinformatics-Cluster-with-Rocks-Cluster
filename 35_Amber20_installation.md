@@ -73,7 +73,7 @@ source amber.sh
 #### Complie and install
 ```
 cd build
-cmake .. -DCMAKE_INSTALL_PREFIX=/apps/amber20 -DCOMPILER=GNU -DINSTALL_TESTS=FALSE
+cmake .. -DCMAKE_INSTALL_PREFIX=/apps/amber20 -DCOMPILER=GNU -DINSTALL_TESTS=FALSE -DDOWNLOAD_MINICONDA=TRUE -DMINICONDA_USE_PY3=TRUE
 make install -j8
 ```
 
@@ -112,7 +112,7 @@ source amber.sh
 ```
 cd build
 make clean
-cmake .. -DCMAKE_INSTALL_PREFIX=/apps/amber20 -DCOMPILER=GNU -DCUDA=TRUE -DCUDA_TOOLKIT_ROOT_DIR=/usr/local/cuda-9.2 -DINSTALL_TESTS=FALSE
+cmake .. -DCMAKE_INSTALL_PREFIX=/apps/amber20 -DCOMPILER=GNU -DCUDA=TRUE -DCUDA_TOOLKIT_ROOT_DIR=/usr/local/cuda-9.2 -DINSTALL_TESTS=FALSE -DDOWNLOAD_MINICONDA=TRUE -DMINICONDA_USE_PY3=TRUE
 make install -j8
 ```
 
@@ -138,7 +138,7 @@ source amber.sh
 ```
 cd build
 make clean
-cmake .. -DCMAKE_INSTALL_PREFIX=/apps/amber20 -DCOMPILER=GNU -DMPI=TRUE -DINSTALL_TESTS=FALSE
+cmake .. -DCMAKE_INSTALL_PREFIX=/apps/amber20 -DCOMPILER=GNU -DMPI=TRUE -DINSTALL_TESTS=FALSE -DDOWNLOAD_MINICONDA=TRUE -DMINICONDA_USE_PY3=TRUE
 make install -j8
 ```
 
@@ -180,7 +180,7 @@ source amber.sh
 ```
 cd build
 make clean
-cmake .. -DCMAKE_INSTALL_PREFIX=/apps/amber20 -DCOMPILER=GNU -DMPI=TRUE -DCUDA=TRUE -DCUDA_TOOLKIT_ROOT_DIR=/usr/local/cuda-9.2 -DINSTALL_TESTS=FALSE
+cmake .. -DCMAKE_INSTALL_PREFIX=/apps/amber20 -DCOMPILER=GNU -DMPI=TRUE -DCUDA=TRUE -DCUDA_TOOLKIT_ROOT_DIR=/usr/local/cuda-9.2 -DINSTALL_TESTS=FALSE -DDOWNLOAD_MINICONDA=TRUE -DMINICONDA_USE_PY3=TRUE
 make install -j8
 ```
 
@@ -235,7 +235,7 @@ source amber.sh
 export NCCL_HOME="~/apps/lib/nccl_2.6.4-1+cuda10.0_x86_64"
 cd build
 make clean
-cmake .. -DCMAKE_INSTALL_PREFIX=/apps/amber20 -DCOMPILER=GNU -DMPI=TRUE -DCUDA=TRUE -DCUDA_TOOLKIT_ROOT_DIR=/usr/local/cuda-9.2 -DNCCL=TRUE -DINSTALL_TESTS=FALSE -DPnetCDF_C_LIBRARY=~/apps/pnetcdf/lib/ -DPnetCDF_C_INCLUDE_DIR=~/apps/pnetcdf/include/
+cmake .. -DCMAKE_INSTALL_PREFIX=/apps/amber20 -DCOMPILER=GNU -DMPI=TRUE -DCUDA=TRUE -DCUDA_TOOLKIT_ROOT_DIR=/usr/local/cuda-9.2 -DNCCL=TRUE -DINSTALL_TESTS=FALSE -DPnetCDF_C_LIBRARY=~/apps/pnetcdf/lib/ -DPnetCDF_C_INCLUDE_DIR=~/apps/pnetcdf/include/ -DINSTALL_TESTS=FALSE -DDOWNLOAD_MINICONDA=TRUE -DMINICONDA_USE_PY3=TRUE
 make install -j8
 ```
 
