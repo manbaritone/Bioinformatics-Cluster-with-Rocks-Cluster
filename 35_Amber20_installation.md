@@ -42,6 +42,25 @@ cd amber20_src
 ./update_amber --update
 ```
 
+#### Edit miniconda version
+```
+cd amber20_src/AmberTools/src/
+vi configure_python
+
+CHANGE line 32 and 34 to
+version = 3
+MINICONDA_VERSION = py37_4.9.2
+```
+
+```
+cd amber20_src/cmake
+vi UseMiniconda.cmake
+
+CHANGE line 99 to
+set(INSTALLER_URL "http://repo.continuum.io/miniconda/Miniconda3-py37_4.9.2-Linux-x86_64.sh")
+```
+
+
 ### Compile Serial CPU
 
 #### Run amber configure script
