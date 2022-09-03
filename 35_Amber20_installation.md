@@ -45,15 +45,9 @@ cd amber20_src
 
 ### Compile Serial CPU
 
-#### Run amber configure script
-```
-cd amber20_src
-./configure -noX11 gnu
-source amber.sh
-```
-
 #### Complie and install
 ```
+cd amber20_src
 cd build
 cmake .. -DCMAKE_INSTALL_PREFIX=/apps/amber20 -DCOMPILER=GNU -DINSTALL_TESTS=FALSE -DDOWNLOAD_MINICONDA=TRUE -DMINICONDA_USE_PY3=TRUE
 make install -j8
@@ -81,17 +75,10 @@ Amber tries to support all CUDA SDK versions up to 11.x. In the past, they have 
 * GTX-780Ti cards require a modified Bios from Exxact Corp to give correct numerical results.
 * GTX-Titan-Black Edition cards require NVIDIA Driver version >= 337.09 or 331.79 or later for correct numerical results.
 
-#### Run amber configure script
-```
-module load cuda/9.2
-
-cd /root/amber20_src
-source amber.sh
-./configure -cuda -noX11 gnu
-```
-
 #### Complie and install
 ```
+module load cuda/9.2
+cd amber20_src
 cd build
 make clean
 cmake .. -DCMAKE_INSTALL_PREFIX=/apps/amber20 -DCOMPILER=GNU -DCUDA=TRUE -DCUDA_TOOLKIT_ROOT_DIR=/usr/local/cuda-9.2 -DINSTALL_TESTS=FALSE -DDOWNLOAD_MINICONDA=TRUE -DMINICONDA_USE_PY3=TRUE
@@ -107,17 +94,10 @@ make test.cuda
 
 ### Compile for Parallel CPU
 
-#### Run amber configure script
-```
-module load openmpi3
-
-cd /root/amber20_src
-source amber.sh
-./configure -noX11 -openmp gnu
-```
-
 #### Complie and install
 ```
+module load openmpi3
+cd amber20_src
 cd build
 make clean
 cmake .. -DCMAKE_INSTALL_PREFIX=/apps/amber20 -DCOMPILER=GNU -DMPI=TRUE -DINSTALL_TESTS=FALSE -DDOWNLOAD_MINICONDA=TRUE -DMINICONDA_USE_PY3=TRUE
@@ -148,18 +128,11 @@ Amber tries to support all CUDA SDK versions up to 11.x. In the past, they have 
 * GTX-780Ti cards require a modified Bios from Exxact Corp to give correct numerical results.
 * GTX-Titan-Black Edition cards require NVIDIA Driver version >= 337.09 or 331.79 or later for correct numerical results.
 
-#### Run amber configure script
+#### Complie and install
 ```
 module load cuda/9.2
 module load openmpi3
-
-cd /root/amber20_src
-source amber.sh
-./configure -noX11 -openmp -cuda gnu
-```
-
-#### Complie and install
-```
+cd amber20_src
 cd build
 make clean
 cmake .. -DCMAKE_INSTALL_PREFIX=/apps/amber20 -DCOMPILER=GNU -DMPI=TRUE -DCUDA=TRUE -DCUDA_TOOLKIT_ROOT_DIR=/usr/local/cuda-9.2 -DINSTALL_TESTS=FALSE -DDOWNLOAD_MINICONDA=TRUE -DMINICONDA_USE_PY3=TRUE
@@ -202,18 +175,11 @@ make -j8
 make install
 ```
 
-#### Run amber configure script
+#### Complie and install
 ```
 module load cuda/9.2
 module load openmpi3
-
-cd /root/amber20_src
-source amber.sh
-./configure -noX11 -openmp -cuda gnu
-```
-
-#### Complie and install
-```
+cd amber20_src
 export NCCL_HOME="~/apps/lib/nccl_2.6.4-1+cuda10.0_x86_64"
 cd build
 make clean
