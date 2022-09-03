@@ -38,7 +38,6 @@ mkdir /apps/amber20
 #### Upgrade and update Amber
 ```
 cd amber20_src
-./update_amber --upgrade
 ./update_amber --update
 ```
 
