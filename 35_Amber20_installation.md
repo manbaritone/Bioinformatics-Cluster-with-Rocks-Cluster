@@ -9,7 +9,7 @@ Ref: https://ambermd.org/
 
 ### Pre-installation
 
-System: CentOS Linux release 7.6.1810 with CMake 3.12.2, CUDA 9.2, GNU7 v7.3.0, OpenMPI3 v3.1.0 operated by Lmod
+System: CentOS Linux release 7.6.1810 with CMake 3.20.1, CUDA 11.1.1, GNU10 v10.3.0, OpenMPI4 v4.1.1 operated by Lmod
 
 Refs: \
 https://www.hull1.com/linux/2020/08/21/complie-amber20.html \
@@ -30,6 +30,7 @@ yum -y install tcsh make \
 tar xvfj AmberTools20.tar.bz2
 tar xvfj Amber20.tar.bz2
 ```
+
 #### Create amber20 folder at destination path (e.g. /apps/amber20)
 ```
 mkdir /apps/amber20
@@ -38,27 +39,9 @@ mkdir /apps/amber20
 #### Upgrade and update Amber
 ```
 cd amber20_src
+./update_amber --upgrade
 ./update_amber --update
 ```
-
-#### Edit miniconda version
-```
-cd amber20_src/AmberTools/src/
-vi configure_python
-
-CHANGE line 32 and 34 to
-version = 3
-MINICONDA_VERSION = py37_4.9.2
-```
-
-```
-cd amber20_src/cmake
-vi UseMiniconda.cmake
-
-CHANGE line 99 to
-set(INSTALLER_URL "http://repo.continuum.io/miniconda/Miniconda3-py37_4.9.2-Linux-x86_64.sh")
-```
-
 
 ### Compile Serial CPU
 
