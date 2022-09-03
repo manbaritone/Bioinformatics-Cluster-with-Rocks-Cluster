@@ -77,7 +77,6 @@ Amber tries to support all CUDA SDK versions up to 11.x. In the past, they have 
 
 #### Complie and install
 ```
-module load cuda/9.2
 cd amber20_src
 cd build
 make clean
@@ -96,7 +95,6 @@ make test.cuda
 
 #### Complie and install
 ```
-module load openmpi3
 cd amber20_src
 cd build
 make clean
@@ -130,8 +128,6 @@ Amber tries to support all CUDA SDK versions up to 11.x. In the past, they have 
 
 #### Complie and install
 ```
-module load cuda/9.2
-module load openmpi3
 cd amber20_src
 cd build
 make clean
@@ -177,8 +173,6 @@ make install
 
 #### Complie and install
 ```
-module load cuda/9.2
-module load openmpi3
 cd amber20_src
 export NCCL_HOME="~/apps/lib/nccl_2.6.4-1+cuda10.0_x86_64"
 cd build
