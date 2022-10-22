@@ -98,6 +98,11 @@ Editing a daemon file
 ExecStart=/share/apps/CCDC/CCDCLicServer/CCDCFloatServer "-a" "-c" "/apps/CCDC/CCDCLicServer/config.yml" "-p" "/apps/CCDC/CCDCLicServer/ccdc.dat" "-s"
 ```
 
+Automatic starting service
+```
+$ systemctl enable ccdcfloatserver
+```
+
 Activate License for all nodes
 ```
 # cd /apps/CCDC/CSD_2002/bin
