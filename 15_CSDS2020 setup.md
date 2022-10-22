@@ -27,12 +27,12 @@ chmod a+x ccdc_licence_server-v2-linux-x64-installer.run
 ./ccdc_licence_server-v2-linux-x64-installer.run
 ```
 
-Go to CCDCLicServer folder
+Going to CCDCLicServer folder
 ```
 # cd /apps/CCDC/CCDCLicServer
 ```
 
-make file config.yml
+Making file config.yml
 ```
 server:
   # Port server should listen to
@@ -81,7 +81,7 @@ logging:
     directory: "./logs"
 ```
 
-Activate local license service
+Activating local license service
 ```
 # ./CCDCFloatServer -a --license-key=XXXXXX-XXXXXX-XXXXXX-XXXXXX-XXXXXX-XXXXXX -config=./config.yml --product-file=./ccdc.dat
 ```
@@ -89,6 +89,13 @@ Activate local license service
 Installing as a daemon on Linux
 ```
 # ./CCDCFloatServer -i -p ./ccdc.dat -c ./config.yml --service-name ccdcfloatserver
+```
+
+Editing as a daemon file
+```
+# vi /etc/systemd/system/ccdcfloatserver.service
+
+ExecStart=/share/apps/CCDC/CCDCLicServer/CCDCFloatServer "-a" "-c" "/apps/CCDC/CCDCLicServer/config.yml" "-p" "/apps/CCDC/CCDCLicServer/ccdc.dat" "-s"
 ```
 
 Activate License for all nodes
