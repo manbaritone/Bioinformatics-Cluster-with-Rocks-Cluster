@@ -91,7 +91,7 @@ Installing as a daemon on Linux
 # ./CCDCFloatServer -i -p ./ccdc.dat -c ./config.yml --service-name ccdcfloatserver
 ```
 
-Editing as a daemon file
+Editing a daemon file
 ```
 # vi /etc/systemd/system/ccdcfloatserver.service
 
