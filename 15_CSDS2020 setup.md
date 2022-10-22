@@ -83,7 +83,7 @@ logging:
 
 Activate local license service
 ```
-# ./CCDCFloatServer -a
+# ./CCDCFloatServer -a --license-key=XXXXXX-XXXXXX-XXXXXX-XXXXXX-XXXXXX-XXXXXX -config=./config.yml --product-file=./ccdc.dat
 ```
 
 Installing as a daemon on Linux
