@@ -21,35 +21,6 @@ https://www.ccdc.cam.ac.uk/support-and-resources/support/case/?caseid=8f5d786c-6
 # ../bin/ccdc_activator -k XXXXXXX-XXXXXX-XXXXXX-XXXXXX-XXXXXX-XXXXXX -a -o -f ./c0_license.dat -A
 ```
 
-### For using with SGE
-```
-#!/bin/sh
-#$ -cwd
-#$ -j y
-
-#$ -S /bin/sh
-
-export MPI=/opt/openmpi/bin/
-export LD_LIBRARY_PATH=/opt/openmpi/lib:/opt/openmpi/lib/openmpi:$LD_LIBRARY_PATH
-
-# Define path of Gold directory.
-export GOLD_DIR=“/state/partition4/home_other/nobackup/kiattawee/CCDC/GoldSuite_2018/"
-
-# Define path of Gold license file.
-export CCDC_LICENSE_FILE=/state/partition4/home_other/nobackup/kiattawee/CCDC/CSD_2018/csd/csd_licence.dat
-
-# Add Gold lib.
-export LD_LIBRARY_PATH=${GOLD_DIR}/c_linux-64/lib:${LD_LIBRARY_PATH}
-
-
-###############################################
-
-# Run Gold program.
-${GOLD_DIR}/bin/gold_auto gold.conf
-
-###############################################
-```
-
 ### Licence server setup
 ```
 chmod a+x ccdc_licence_server-v2-linux-x64-installer.run
@@ -122,7 +93,7 @@ Installing as a daemon on Linux
 
 Activate License for all nodes
 ```
-cd /apps/CCDC/CSD_2002/bin
+# cd /apps/CCDC/CSD_2002/bin
 # ./ccdc_activator -A -s http://ip:port
 ```
 
