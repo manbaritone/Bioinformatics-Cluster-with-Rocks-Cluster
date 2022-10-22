@@ -52,39 +52,82 @@ ${GOLD_DIR}/bin/gold_auto gold.conf
 
 ### Licence server setup
 ```
-chmod a+x ccdc_licence_server-linux-x64-installer.run
-./ccdc_licence_server-linux-x64-installer.run
+chmod a+x ccdc_licence_server-v2-linux-x64-installer.run
+./ccdc_licence_server-v2-linux-x64-installer.run
 ```
-make service script
+
+Go to CCDCLicServer folder
 ```
-vi /etc/systemd/system/ccdcfloatserver.service
-
-[Unit]
-Description=ccdc-floating-server
-
-After=network.target local-fs.target multi-user.target
-Requires=network.target local-fs.target multi-user.target
-
-[Service]
-Type=simple
-Restart=always
-RestartSec=3
-User=root
-ExecStart=/apps/CCDC/CCDCLicServer/CCDCFloatServer -s -productfile=/apps/CCDC/CCDCLicServer/ccdc.dat -config=/apps/CCDC/CCDCLicServer/ccdc.config -silent
-
-[Install]
-WantedBy=multi-user.target
+# cd /apps/CCDC/CCDCLicServer
 ```
-Setup port by ccdc.config
+
+make file config.yml
 ```
-# Port LexFloatServer should bind to
-port=8880
+server:
+  # Port server should listen to
+  port: XXXX
+  # License key to activate the server
+  licenseKey: XXXXXX-XXXXXX-XXXXXX-XXXXXX-XXXXXX-XXXXXX
+  # Product file path
+  productFilePath: ./ccdc.dat
+  # Determines how long a license lease should last. The time is in seconds.
+  leaseDuration: 3700
+  # Allows for a time lag (in secs) between server and client machines.
+  allowedClockOffset: 60
+  # Blocked IP addresses
+  blockedIps: []
 
+  cryptlexHost: https://license-api.ccdc.cam.ac.uk
 
-# run to make ccdc.dat
-./CCDCFloatServer -a -licensekey=123456-123456-123456-123456-123456-123456 -config=./ccdc.config -productfile=./ccdc.dat
+auth:
+  # API key to access the following web API endpoints:
+  # - GET /api/server/stats?apiKey=xxx
+  # - GET /api/floating-licenses?apiKey=xxx
+  apiKey: XXXXXXXXX
+  # List of admin users who can access the dashboard
+  admins:
+    - username: XXXXXXXXXX
+      password: XXXXXXXXXX
+      # Instead of password you can also provide a SHA256 hash of the password - https://xorbin.com/tools/sha256-hash-calculator
+      passwordHash:
 
-# start the service
-systemctl start ccdcfloatserver
+logging:
+  # Allowed log levels: "0" - Debug, "1" - Information, "2" - Warning, "3" - Errors
+  logLevel: 1
+  console:
+    # Enable console logs
+    enabled: true
+    # Disable colored console logs
+    noColor: true
+  file:
+    # Disable file logs, they will be managed by journald
+    enabled: true
+    # Maximum size of each log file in MBs
+    maxSize: 1
+    # Maximum backups to retain
+    maxBackups: 10
+    # Logs directory
+    directory: "./logs"
+```
 
+Activate local license service
+```
+# ./CCDCFloatServer -a
+```
+
+Installing as a daemon on Linux
+```
+# ./CCDCFloatServer -i -p ./ccdc.dat -c ./config.yml --service-name ccdcfloatserver
+```
+
+Activate License for all nodes
+```
+cd /apps/CCDC/CSD_2002/bin
+# ./ccdc_activator -A -s http://ip:port
+```
+
+Uninstalling the Licence Server service on Linux
+```
+# CCDCFloatServer -d
+# CCDCFloatServer -u --service-name ccdcfloatserver
 ```
