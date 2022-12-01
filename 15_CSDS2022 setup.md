@@ -1,8 +1,8 @@
 ```
-# tar -xvf csds-2020.0-linux-x64.tar 
+# tar -xvf csds-2022.1-linux-x64.tar 
 # ./csds-linux-x64.run 
 
-# cd /apps/CCDC/CSD_2020/csd 
+# cd /apps/CCDC/CSD_2022/csd 
 # ../bin/ccdc_activator -k XXXXXXX-XXXXXX-XXXXXX-XXXXXX-XXXXXX-XXXXXX -g -f ./master_license.dat -A
 ```
 
@@ -10,14 +10,14 @@
 https://www.ccdc.cam.ac.uk/support-and-resources/support/case/?caseid=8f5d786c-682d-ea11-978f-005056977c87
 ```
 # ssh compute-0-0
-# cd /apps/CCDC/CSD_2020/csd 
+# cd /apps/CCDC/CSD_2022/csd 
 # ../bin/ccdc_activator -k XXXXXXX-XXXXXX-XXXXXX-XXXXXX-XXXXXX-XXXXXX -g -f ./c0_license.dat -A
 # exit
 ```
 
 ### Online Registration
 ```
-# cd /apps/CCDC/CSD_2019/csd
+# cd /apps/CCDC/CSD_2022/csd
 # ../bin/ccdc_activator -k XXXXXXX-XXXXXX-XXXXXX-XXXXXX-XXXXXX-XXXXXX -a -o -f ./c0_license.dat -A
 ```
 
@@ -105,7 +105,7 @@ $ systemctl enable ccdcfloatserver
 
 Activate License for all nodes
 ```
-# cd /apps/CCDC/CSD_2002/bin
+# cd /apps/CCDC/CSD_2022/bin
 # ./ccdc_activator -A -s http://ip:port
 ```
 
