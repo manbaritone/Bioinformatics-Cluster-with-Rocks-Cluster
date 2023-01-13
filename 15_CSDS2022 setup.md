@@ -2,19 +2,6 @@
 # tar -xvf csds-2022.1-linux-x64.tar 
 # ./csds-linux-x64.run 
 
-# cd /apps/CCDC/CSD_2022/csd 
-# ../bin/ccdc_activator -k XXXXXXX-XXXXXX-XXXXXX-XXXXXX-XXXXXX-XXXXXX -g -f ./master_license.dat -A
-```
-
-### Generate license offline
-https://www.ccdc.cam.ac.uk/support-and-resources/support/case/?caseid=8f5d786c-682d-ea11-978f-005056977c87
-```
-# ssh compute-0-0
-# cd /apps/CCDC/CSD_2022/csd 
-# ../bin/ccdc_activator -k XXXXXXX-XXXXXX-XXXXXX-XXXXXX-XXXXXX-XXXXXX -g -f ./c0_license.dat -A
-# exit
-```
-
 ### Online Registration
 ```
 # cd /apps/CCDC/CSD_2022/csd
@@ -24,7 +11,7 @@ https://www.ccdc.cam.ac.uk/support-and-resources/support/case/?caseid=8f5d786c-6
 ### Licence server setup
 ```
 chmod a+x ccdc_licence_server-v2-linux-x64-installer.run
-./ccdc_licence_server-v2-linux-x64-installer.run
+./ccdc_licence_server-v2-linux-x64-installer.run (Enter Server License Key)
 ```
 
 Going to CCDCLicServer folder
