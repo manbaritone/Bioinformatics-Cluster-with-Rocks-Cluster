@@ -1,6 +1,7 @@
 ```
 # tar -xvf csds-2022.1-linux-x64.tar 
 # ./csds-linux-x64.run 
+```
 
 ### Online Registration
 ```
