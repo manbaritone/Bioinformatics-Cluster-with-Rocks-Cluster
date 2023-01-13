@@ -88,6 +88,7 @@ ExecStart=/share/apps/CCDC/CCDCLicServer/CCDCFloatServer "-a" "-c" "/apps/CCDC/C
 
 Automatic starting service
 ```
+$ systemctl start ccdcfloatserver
 $ systemctl enable ccdcfloatserver
 ```
 
