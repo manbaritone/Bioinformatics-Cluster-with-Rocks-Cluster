@@ -99,6 +99,6 @@ Activate License for all nodes
 
 Uninstalling the Licence Server service on Linux
 ```
-# CCDCFloatServer -d
-# CCDCFloatServer -u --service-name ccdcfloatserver
+# ./CCDCFloatServer -d
+# ./CCDCFloatServer -u --service-name ccdcfloatserver
 ```
