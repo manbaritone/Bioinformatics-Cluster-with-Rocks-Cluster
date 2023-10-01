@@ -1,3 +1,5 @@
+Ref: https://manual.gromacs.org/documentation/2023.2/install-guide/index.html
+
 ```
 # ml swap gnu7 gnu11
 # ml cmake/3.27.6 cuda/11.8 openmpi4
