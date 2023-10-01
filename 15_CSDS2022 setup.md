@@ -6,7 +6,7 @@
 ### Online Registration
 ```
 # cd /apps/CCDC/CSD_2022/csd
-# ../bin/ccdc_activator -k XXXXXXX-XXXXXX-XXXXXX-XXXXXX-XXXXXX-XXXXXX -a -o -f ./c0_license.dat -A
+# ../bin/ccdc_activator -A -a -k XXXXXXX-XXXXXX-XXXXXX-XXXXXX-XXXXXX-XXXXXX
 ```
 
 ### Licence server setup
