@@ -40,7 +40,7 @@ mkdir /apps/amber22
 cd amber22_src
 ./update_amber --update
 ```
-if have any error due to "https", please modify the code in py files (downloader.py, main.py, patch.py, and test_updateutils.py) in amber22_src/updateutils folder from "https" to "http"
+if have any error due to "https", please modify the code in 4 py files (downloader.py, main.py, patch.py, and test_updateutils.py) in amber22_src/updateutils folder from "https" to "http"
 
 #### Change the Miniconda version from "latest" to "py39_23.5.2-0" to avoid python error during compile
 ```
