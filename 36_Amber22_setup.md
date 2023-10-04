@@ -26,13 +26,8 @@ yum -y install tcsh make \
 
 #### Extract amber
 ```
-tar xvfj AmberTools22.tar.bz2
+tar xvfj AmberTools23.tar.bz2
 tar xvfj Amber22.tar.bz2
-```
-
-#### Create amber22 folder at destination path (e.g. /apps/amber22)
-```
-mkdir /apps/amber22
 ```
 
 #### Upgrade and update Amber
@@ -42,13 +37,6 @@ cd amber22_src
 ```
 if have any error due to "https", please modify the code in 4 py files (downloader.py, main.py, patch.py, and test_updateutils.py) in amber22_src/updateutils folder from "https" to "http". You can easily modify by using the command in VIM with ":%s/https/http".
 
-#### Change the Miniconda version from "latest" to "py39_23.5.2-0" to avoid python error during compile
-```
-cd amber22_src
-cd cmake
-vi PythonInterpreterConfig.cmake
-```
-Change "set(MINICONDA_VERSION latest)" to set(MINICONDA_VERSION py39_23.5.2-0)
 
 ### Compile Serial CPU
 
@@ -56,7 +44,7 @@ Change "set(MINICONDA_VERSION latest)" to set(MINICONDA_VERSION py39_23.5.2-0)
 ```
 cd amber22_src
 cd build
-cmake .. -DCMAKE_INSTALL_PREFIX=/apps/amber22 -DCOMPILER=GNU -DCUDA=FALSE -DMPI=FALSE -DINSTALL_TESTS=FALSE -DDOWNLOAD_MINICONDA=TRUE -DMINICONDA_USE_PY3=TRUE
+cmake .. -DCMAKE_INSTALL_PREFIX=/apps/amber22 -DCOMPILER=GNU -DCUDA=FALSE -DMPI=FALSE -DINSTALL_TESTS=FALSE -DDOWNLOAD_MINICONDA=TRUE -DMINICONDA_USE_PY3=TRUE -DMINICONDA_VERSION=py38_4.12.0
 make install -j8
 ```
 
@@ -76,7 +64,7 @@ Ref: https://ambermd.org/GPUHardware.php
 cd amber22_src
 cd build
 make clean
-cmake .. -DCMAKE_INSTALL_PREFIX=/apps/amber22 -DCOMPILER=GNU -DMPI=FALSE -DCUDA=TRUE -DCUDA_TOOLKIT_ROOT_DIR=/usr/local/cuda-11.8 -DINSTALL_TESTS=FALSE -DDOWNLOAD_MINICONDA=TRUE -DMINICONDA_USE_PY3=TRUE
+cmake .. -DCMAKE_INSTALL_PREFIX=/apps/amber22 -DCOMPILER=GNU -DMPI=FALSE -DCUDA=TRUE -DCUDA_TOOLKIT_ROOT_DIR=/usr/local/cuda-11.8 -DINSTALL_TESTS=FALSE -DDOWNLOAD_MINICONDA=TRUE -DMINICONDA_USE_PY3=TRUE -DMINICONDA_VERSION=py38_4.12.0
 make install -j8
 ```
 
@@ -94,7 +82,7 @@ make test.cuda
 cd amber22_src
 cd build
 make clean
-cmake .. -DCMAKE_INSTALL_PREFIX=/apps/amber22 -DCOMPILER=GNU -DCUDA=FALSE -DMPI=TRUE -DINSTALL_TESTS=FALSE -DDOWNLOAD_MINICONDA=TRUE -DMINICONDA_USE_PY3=TRUE
+cmake .. -DCMAKE_INSTALL_PREFIX=/apps/amber22 -DCOMPILER=GNU -DCUDA=FALSE -DMPI=TRUE -DINSTALL_TESTS=FALSE -DDOWNLOAD_MINICONDA=TRUE -DMINICONDA_USE_PY3=TRUE -DMINICONDA_VERSION=py38_4.12.0
 make install -j8
 ```
 
@@ -116,7 +104,7 @@ Ref: https://ambermd.org/GPUHardware.php
 cd amber22_src
 cd build
 make clean
-cmake .. -DCMAKE_INSTALL_PREFIX=/apps/amber22 -DCOMPILER=GNU -DMPI=TRUE -DCUDA=TRUE -DCUDA_TOOLKIT_ROOT_DIR=/usr/local/cuda-11.8 -DINSTALL_TESTS=FALSE -DDOWNLOAD_MINICONDA=TRUE -DMINICONDA_USE_PY3=TRUE
+cmake .. -DCMAKE_INSTALL_PREFIX=/apps/amber22 -DCOMPILER=GNU -DMPI=TRUE -DCUDA=TRUE -DCUDA_TOOLKIT_ROOT_DIR=/usr/local/cuda-11.8 -DINSTALL_TESTS=FALSE -DDOWNLOAD_MINICONDA=TRUE -DMINICONDA_USE_PY3=TRUE -DMINICONDA_VERSION=py38_4.12.0
 make install -j8
 ```
 
@@ -151,7 +139,7 @@ cd amber22_src
 export NCCL_HOME="~/apps/lib/nccl_2.6.4-1+cuda10.0_x86_64"
 cd build
 make clean
-cmake .. -DCMAKE_INSTALL_PREFIX=/apps/amber22 -DCOMPILER=GNU -DMPI=TRUE -DCUDA=TRUE -DCUDA_TOOLKIT_ROOT_DIR=/usr/local/cuda-11.8 -DNCCL=TRUE -DPnetCDF_C_LIBRARY=~/apps/pnetcdf/lib/-DPnetCDF_C_INCLUDE_DIR=~/apps/pnetcdf/include/ -DINSTALL_TESTS=FALSE -DDOWNLOAD_MINICONDA=TRUE -DMINICONDA_USE_PY3=TRUE
+cmake .. -DCMAKE_INSTALL_PREFIX=/apps/amber22 -DCOMPILER=GNU -DMPI=TRUE -DCUDA=TRUE -DCUDA_TOOLKIT_ROOT_DIR=/usr/local/cuda-11.8 -DNCCL=TRUE -DPnetCDF_C_LIBRARY=~/apps/pnetcdf/lib/-DPnetCDF_C_INCLUDE_DIR=~/apps/pnetcdf/include/ -DINSTALL_TESTS=FALSE -DDOWNLOAD_MINICONDA=TRUE -DMINICONDA_USE_PY3=TRUE -DMINICONDA_VERSION=py38_4.12.0
 make install -j8
 ```
 
