@@ -9,7 +9,7 @@ Ref: https://ambermd.org/
 
 ### Pre-installation
 
-System: CentOS Linux release 7.6.1810 with CMake 3.27.6, CUDA 11.8, GNU7 v7.3.0, OpenMPI3 v3.1.0 operated by Lmod
+System: CentOS Linux release 7.6.1810 with CMake 3.27.6, CUDA 11.8, GNU11 v11.2.1, and OpenMPI4 v4.1.6 operated by Lmod
 
 Refs: \
 https://ambermd.org/doc12/Amber22.pdf
