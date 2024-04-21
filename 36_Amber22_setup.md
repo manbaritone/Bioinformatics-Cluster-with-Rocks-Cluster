@@ -72,7 +72,7 @@ make install -j8
 ```
 cd /apps/amber22
 source amber.sh
-make test.cuda
+make test.cuda.serial
 ```
 
 ### Compile for Parallel CPU
